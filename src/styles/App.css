@@ -14,7 +14,7 @@ html,body {
 .wrap{
   position: relative;
   width: 100%;
-  height: 700px;
+  height: 800px;
 }
 
 /* 图片区域 */
@@ -24,6 +24,22 @@ html,body {
   height: 100%;
   overflow: hidden;
   background-color: #ddd;
+}
+.imgFigure{
+  position: absolute;
+  width: 320px;
+  height: 360px;
+  padding: 40px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+figcaption{
+  text-align: center;
+}
+.imgTitle{
+  margin: 20px 0 0 0;
+  color: #a7a0a2;
+  font-size: 16px;
 }
  /* 控制区域 */
 .controllArea{
