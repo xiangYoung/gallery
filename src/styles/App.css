@@ -1,4 +1,13 @@
 /* Base Application Styles */
+@font-face {
+  font-family: 'iconfont';  /* project id 766015 */
+  src: url('//at.alicdn.com/t/font_766015_kobab1esfm.eot');
+  src: url('//at.alicdn.com/t/font_766015_kobab1esfm.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_766015_kobab1esfm.woff') format('woff'),
+  url('//at.alicdn.com/t/font_766015_kobab1esfm.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_766015_kobab1esfm.svg#iconfont') format('svg');
+}
+
 html,body {
   width: 100%;
   height: 100%;
@@ -79,4 +88,33 @@ p {
 
   width: 100%;
   text-align: center;
+}
+.controllerUnit{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  background-color: #aaa;
+  border-radius: 50%;
+  transform: scale(.5);
+  transition: transform .6s ease-in-out, background-color .3s;
+}
+.isControllCenter{
+  background-color: #888;
+
+  transform: scale(1);
+}
+.isControllCenter::after{
+  font-family: 'iconfont';
+  color: #fff;
+  line-height: 30px;
+  content: "\e767";
+  -webkit-font-smoothing:antialiased;
+}
+.isControllInverse{
+  background-color: #555;
+  transform: rotateY(180deg);
 }
