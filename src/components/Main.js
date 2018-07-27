@@ -37,8 +37,8 @@ class SingleFigure extends React.Component {
       styleObj = this.props.arrange.pos;
     }
     if (this.props.arrange.rotate) {
-      (['-moz-', '-ms-', '-webkit-', '']).forEach(function (value) {
-        styleObj[value + 'transform'] = 'rotate(' + this.props.arrange.rotate + 'deg)';
+      (['MozTransform', 'msTransform', 'WebkitTransform', 'transform']).forEach(function (value) {
+        styleObj[value] = 'rotate(' + this.props.arrange.rotate + 'deg)';
       }.bind(this))
 
     }
@@ -89,6 +89,7 @@ class Controller extends React.Component {
     )
   }
 }
+// 大管家
 class AppComponent extends React.Component {
   state = {
     Constant: {
@@ -255,7 +256,7 @@ class AppComponent extends React.Component {
       }
       imgFigures.push(<SingleFigure key={index} data={item} ref={'imgFigure' + index} arrange={this.state.imgArrangeArr[index]} inverse={this.inverse(index)} center={this.center(index)} />)
 
-      controller.push(<Controller arrange={this.state.imgArrangeArr[index]} inverse={this.inverse(index)} center={this.center(index)}/>);
+      controller.push(<Controller key={index} arrange={this.state.imgArrangeArr[index]} inverse={this.inverse(index)} center={this.center(index)}/>);
     });
     return (
       <section className='wrap' ref='wrap'>

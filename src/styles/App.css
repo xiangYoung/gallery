@@ -1,13 +1,16 @@
 /* Base Application Styles */
 @font-face {
   font-family: 'iconfont';  /* project id 766015 */
-  src: url('//at.alicdn.com/t/font_766015_kobab1esfm.eot');
+  /* src: url('//at.alicdn.com/t/font_766015_kobab1esfm.eot');
   src: url('//at.alicdn.com/t/font_766015_kobab1esfm.eot?#iefix') format('embedded-opentype'),
   url('//at.alicdn.com/t/font_766015_kobab1esfm.woff') format('woff'),
   url('//at.alicdn.com/t/font_766015_kobab1esfm.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_766015_kobab1esfm.svg#iconfont') format('svg');
+  url('//at.alicdn.com/t/font_766015_kobab1esfm.svg#iconfont') format('svg'); */
+  src: url("../font/iconfont.eot") format("embedded-opentype"), 
+  url("../font/iconfont.woff") format("woff"), 
+  url("../font/iconfont.ttf") format("truetype"), 
+  url("../font/iconfont.svg") format("svg");
 }
-
 html,body {
   width: 100%;
   height: 100%;
@@ -76,6 +79,7 @@ figcaption{
   transform: rotateY(180deg) translateZ(1px);
   backface-visibility: hidden; 
 }
+/* translateZ(1px)解决safari兼容 */
 p {
   margin: 0;
 }
